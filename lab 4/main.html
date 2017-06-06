@@ -14,10 +14,11 @@
         </header>
         <div class="menu">
             <ol>
-                <a href="">Головна сторінка</a><br>
+                <a href="">Головна</a><br>
                 <a href="">Категорії</a><br>
+                <a href="">Додати фото</a><br>
                 <a href="">Нові фотографії</a><br>
-                <a href="">Улюблені фотографії</a>
+                <a href="">Улюблені</a>
             </ol>
         </div>
         <footer>
@@ -27,7 +28,26 @@
     </div>
     <div class="second">
         <div class="null1"></div>
-        <div class="null2"></div>
+        <div class="null2">
+            <ul>
+                <a id="login-trigger" href="#">
+                    Замовити <span>&#x25BC;</span>
+                </a>
+                <div id="login-content">
+                    <form name="Order" onsubmit="Valid()">
+                        <fieldset id="inputs">
+                            <input id="name" type="text" name="Name" placeholder="Ваше Ім'я" required>
+                            <input id="phoneNum" type="tel" name="phoneNum" placeholder="Ваш телефон" required>
+                            <input id="email" type="email" name="Email" placeholder="Ваш email адрес" required>   
+                            <input id="time" type="time" name="time" placeholder="Час доставки" required>
+                        </fieldset>
+                        <fieldset id="actions">
+                            <input type="submit" id="submit" value="Замовити">
+                        </fieldset>
+                    </form>
+                </div>                     
+	       </ul>
+        </div>
         <div class="content">
             <div class="tab">
                 <table>
@@ -109,24 +129,35 @@
             </div>
         </div>
         <div class="null3">
-           <ul>
-                <a id="login-trigger" href="#">
-                    Замовлення <span>&#x25BC;</span>
-                </a>
-                <div id="login-content">
-                    <form name="Order" onsubmit="Valid()">
-                        <fieldset id="inputs">
-                            <input id="name" type="text" name="name" placeholder="Введіть ім'я" required>
-                            <input id="phoneNum" type="tel" name="phoneNum" placeholder="Введіть телефон" required>
-                            <input id="email" type="email" name="Email" placeholder="Введіть email" required>   
-                            <input id="time" type="time" name="time" placeholder="Час доставки" required>
-                        </fieldset>
-                        <fieldset id="actions">
-                            <input type="submit" id="submit" value="Замовити">
-                        </fieldset>
-                    </form>
-                </div>                     
-	       </ul>
+           <!-- <select name="cars">
+             <option value="volvo">Volvo</option>
+             <option value="saab">Saab</option>
+             <option value="fiat">Fiat</option>
+             <option value="audi">Audi</option>
+            </select>
+            <textarea name="message" rows="1" cols="30">The cat was playing in the garden.
+            </textarea>
+            <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+            <form action="/action_page.php">
+             <input list="browsers">
+             <datalist id="browsers">
+             <option value="Internet Explorer">
+             <option value="Firefox">
+             <option value="Chrome">
+             <option value="Opera">
+             <option value="Safari">
+             </datalist>
+            </form>
+            <form action="/action_page.php">
+ Username: <input type="text" name="user">
+ Encryption: <keygen name="security">
+ <input type="submit">
+</form>
+<form>
+ Telephone:
+ <input type="tel" name="usrtel">
+</form>
+          !-->  
         </div>
         <div class="null4"></div>
     </div>

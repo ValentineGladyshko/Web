@@ -125,6 +125,13 @@ td {
     border-radius: 5%; 
 }
 
+.button {
+    float: left;
+    margin-left: 10px;
+    width: 40%;
+    max-width: 50%;
+}
+
 @keyframes moving {
     from, to {
         border-bottom: 8px double black;
@@ -213,6 +220,10 @@ td {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;		
 }
 
+.mytext {
+    float: left;
+    font-size: 0.75em;
+}
 
 @media screen and (max-width: 1000px) {
     

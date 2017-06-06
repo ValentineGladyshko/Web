@@ -1,5 +1,5 @@
 body {
-    background-color: rgba(255, 191, 0, 0.3);
+    background-color: rgba(0, 0, 255, 0.1);
     font: 1em Comic Sans MS;
 }
 
@@ -107,12 +107,13 @@ td {
     border-bottom: 8px double black;
     border-top: 8px double black;
     border-left: 8px double black;
+	border-radius: 5%;
 }
 
 @media screen and (max-width: 1000px) {
     
     body {
-        background-color: rgba(255, 191, 0, 0.3);
+        background-color: rgba(0, 0, 255, 0.1);
         font: 24px Comic Sans MS;
     }
     

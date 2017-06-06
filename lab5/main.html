@@ -1,3 +1,6 @@
+<?php
+    session_start();
+    ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -109,12 +112,26 @@
             </div>
         </div>
         <div class="null3">
-           <ul>
+            <script type="text/javascript"> 
+            function mode(ajax_save) 
+            { 
+            $.ajax({ 
+            url: 'saving.php',
+            type: 'POST', 
+            data: jQuery('#ajax_save').serialize(), 
+            success: function(data) 
+            { 
+            $('.null4').html(data); 
+            } 
+            }); 
+            } 
+            </script> 
+            <ul>
                 <a id="login-trigger" href="#">
                     Замовлення <span>&#x25BC;</span>
                 </a>
                 <div id="login-content">
-                    <form name="Order" onsubmit="Valid()">
+                    <form id="ajax_save" name="Order" method="post" onsubmit="Valid()">
                         <fieldset id="inputs">
                             <input id="name" type="text" name="name" placeholder="Введіть ім'я" required>
                             <input id="phoneNum" type="tel" name="phoneNum" placeholder="Введіть телефон" required>
@@ -122,13 +139,46 @@
                             <input id="time" type="time" name="time" placeholder="Час доставки" required>
                         </fieldset>
                         <fieldset id="actions">
-                            <input type="submit" id="submit" value="Замовити">
+                            <input type="submit" onclick="mode('ajax_save')" id="submit" value="Замовити">
                         </fieldset>
                     </form>
                 </div>                     
 	       </ul>
         </div>
-        <div class="null4"></div>
+        <div class="null4">
+            <script type="text/javascript"> 
+                function mode1(ajax_output) 
+                { 
+                $.ajax({ 
+                url: 'output.php',
+                type: 'GET', 
+                data: jQuery('#ajax_output').serialize(), 
+                success: function(data) 
+                { 
+                $('.mytext').html(data); 
+                } 
+                }); 
+                } 
+                function mode2(ajax_output) 
+                { 
+                $.ajax({ 
+                url: 'delete.php',
+                type: 'GET', 
+                data: jQuery('#ajax_output').serialize(), 
+                success: function(data) 
+                { 
+                $('.mytext').html(data); 
+                } 
+                }); 
+                } 
+                </script> 
+                <form action="" id="ajax_output" method="get">
+                    <input type="button" onclick="mode1('ajax_output')" class="button" value="Вивести">
+                    <input type="button" onclick="mode2('ajax_output')" class="button" value="Видалити всі дані">
+                </form>
+            <div class="mytext">
+            </div>
+        </div>
     </div>
     <div class="null5">
         <p>Гладишко Валентин<br>

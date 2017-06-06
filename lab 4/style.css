@@ -1,5 +1,5 @@
 body {
-    background-color: rgba(0, 0, 255, 0.1);
+    background-color: rgba(255, 191, 0, 0.3);
     font: 1em Comic Sans MS;
 }
 
@@ -101,7 +101,7 @@ td {
 
 .frame {
     animation-name: moving;
-    animation-duration: 3s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
     animation-timing-function: step-end;
     animation-play-state: paused;
@@ -114,7 +114,7 @@ td {
 
 .frame:hover {
     animation-name: moving;
-    animation-duration: 3s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
     animation-timing-function: step-end;
     animation-play-state: running;
@@ -152,15 +152,16 @@ td {
     }
 }
 
-.null3 ul {
+.null2 ul {
     position: relative;
-    float: left;
+    float: right;
+    right: 50%;
     background-color: #eeeeee;
     border: 1px solid #000000;
     border-radius: 7px;    
 }
 
-.null3 #login-trigger {
+.null2 #login-trigger {
     position: relative;
     display: inline-block;
     right: 5px;
@@ -172,13 +173,13 @@ td {
     color: #444;
 }
 
-.null3 #login-content {
+.null2 #login-content {
   display: none;
   position: absolute;
   top: 24px;
   right: 0;
   z-index: 2;    
-  background-color: rgb(147, 201, 255);
+  background-color: rgb(255, 228, 147);
 }
 
 #inputs input {
@@ -186,26 +187,41 @@ td {
   padding: 6px 5px;
   margin: 0 0 5px 0;
   width: 238px;
-  border: 1px solid #000000;
-  border-radius: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
   box-shadow: 0 1px 1px #ccc inset;
 }
 
 #inputs input:focus {
-  background-color: #dbfad7;
-  border-color: #9ee891;
+  background-color: antiquewhite;
+  border-color: #e8c291;
   outline: none;
-  box-shadow: 0 0 0 1px #afe891 inset;
+  box-shadow: 0 0 0 1px #e8c291 inset;
 }
 #login #actions {
   margin: 10px 0 0 0;
 }
 
 #login #submit {		
+  background-color: #d14545;
+  background-image: linear-gradient(top, #e97171, #d14545);
+  border-radius: 3px;
+  text-shadow: 0 1px 0 rgba(0,0,0,.5);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;    
+  border: 1px solid #7e1515;
+  float: left;
+  height: 30px;
+  padding: 0;
+  width: 100px;
+  cursor: pointer;
+  font: bold 14px Arial, Helvetica;
+  color: #fff;
 }
 
 #login #submit:hover,
 #login #submit:focus {		
+  background-color: #e97171;
+  background-image: linear-gradient(top, #d14545, #e97171);
 }	
 
 #login #submit:active {		
@@ -217,7 +233,7 @@ td {
 @media screen and (max-width: 1000px) {
     
     body {
-        background-color: rgba(0, 0, 255, 0.1);
+        background-color: rgba(255, 191, 0, 0.3);
         font: 24px Comic Sans MS;
     }
     
@@ -230,15 +246,9 @@ td {
     }
 
     .null3 {
-        height: 300px;
-        width: 100%;
-        float: left;
+        display: none;
     }
 
-    .null3 ul {
-        position: relative;
-        float: right;
-    }
     .null4 {
         display: none;
     }
